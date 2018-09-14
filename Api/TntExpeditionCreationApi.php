@@ -20,7 +20,6 @@ class TntExpeditionCreationApi extends TntApi
 			->build()
 		;
 		$this->data = unserialize($this->data);
-		dump($this->data);
 
 		$expedition = new Expedition();
 		$expedition
@@ -34,6 +33,6 @@ class TntExpeditionCreationApi extends TntApi
 			$parcel    = $serializer->deserialize(json_encode($this->data->Expedition->parcelResponses), ParcelResponse::class, 'json');
 			$expedition->addParcelResponse($parcel);
 		}
-		dd($expedition);
+		return $expedition;
 	}
 }
