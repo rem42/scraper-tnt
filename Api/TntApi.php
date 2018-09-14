@@ -1,6 +1,6 @@
 <?php
 
-namespace ScraperTnt\Api;
+namespace Scraper\ScraperTnt\Api;
 
 use Scraper\Scraper\Annotation\UrlAnnotation;
 use Scraper\Scraper\Api\ApiInterface;
