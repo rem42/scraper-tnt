@@ -47,8 +47,8 @@ class Parameters
 	 */
 	protected $parcelsRequest;
 	/**
-	 * @var boolean
-	 * @Serializer\Type("boolean")
+	 * @var string
+	 * @Serializer\Type("string")
 	 */
 	protected $saturdayDelivery;
 	/**
@@ -219,24 +219,24 @@ class Parameters
 		return $this;
 	}
 
-	/**
-	 * @return bool
-	 */
-	public function isSaturdayDelivery(): ?bool
-	{
-		return $this->saturdayDelivery;
-	}
+    /**
+     * @return string
+     */
+    public function getSaturdayDelivery(): ?string
+    {
+        return $this->saturdayDelivery;
+    }
 
-	/**
-	 * @param bool $saturdayDelivery
-	 *
-	 * @return $this
-	 */
-	public function setSaturdayDelivery(?bool $saturdayDelivery)
-	{
-		$this->saturdayDelivery = $saturdayDelivery;
-		return $this;
-	}
+    /**
+     * @param string $saturdayDelivery
+     *
+     * @return $this
+     */
+    public function setSaturdayDelivery(?string $saturdayDelivery): self
+    {
+        $this->saturdayDelivery = $saturdayDelivery;
+        return $this;
+    }
 
 	/**
 	 * @return string
