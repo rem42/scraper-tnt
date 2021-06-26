@@ -4,25 +4,14 @@ namespace Scraper\ScraperTnt\Soap;
 
 class Sender extends Address
 {
-    /**
-     * @var string
-     */
-    protected $faxNumber;
+    protected ?string $faxNumber = null;
 
-    /**
-     * @return string
-     */
     public function getFaxNumber(): ?string
     {
         return $this->faxNumber;
     }
 
-    /**
-     * @param string $faxNumber
-     *
-     * @return $this
-     */
-    public function setFaxNumber(?string $faxNumber)
+    public function setFaxNumber(?string $faxNumber): self
     {
         $this->faxNumber = $faxNumber;
         return $this;
