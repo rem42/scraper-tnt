@@ -21,7 +21,7 @@ class Address
         return $this->type;
     }
 
-    public function setType(?string $type): self
+    public function setType(?string $type): object
     {
         $this->type = $type;
 
@@ -33,7 +33,7 @@ class Address
         return $this->typeId;
     }
 
-    public function setTypeId(?string $typeId): self
+    public function setTypeId(?string $typeId): object
     {
         $this->typeId = $typeId;
 
@@ -45,7 +45,7 @@ class Address
         return $this->name;
     }
 
-    public function setName(?string $name): self
+    public function setName(?string $name): object
     {
         $this->name = $name;
 
@@ -57,7 +57,7 @@ class Address
         return $this->address1;
     }
 
-    public function setAddress1(?string $address1): self
+    public function setAddress1(?string $address1): object
     {
         $this->address1 = $address1;
 
@@ -69,7 +69,7 @@ class Address
         return $this->address2;
     }
 
-    public function setAddress2(?string $address2): self
+    public function setAddress2(?string $address2): object
     {
         $this->address2 = $address2;
 
@@ -81,7 +81,7 @@ class Address
         return $this->zipCode;
     }
 
-    public function setZipCode(?string $zipCode): self
+    public function setZipCode(?string $zipCode): object
     {
         $this->zipCode = $zipCode;
 
@@ -93,7 +93,7 @@ class Address
         return $this->city;
     }
 
-    public function setCity(?string $city): self
+    public function setCity(?string $city): object
     {
         $this->city = $city;
 
@@ -105,7 +105,7 @@ class Address
         return $this->contactLastName;
     }
 
-    public function setContactLastName(?string $contactLastName): self
+    public function setContactLastName(?string $contactLastName): object
     {
         $this->contactLastName = $contactLastName;
 
@@ -117,7 +117,7 @@ class Address
         return $this->contactFirstName;
     }
 
-    public function setContactFirstName(?string $contactFirstName): self
+    public function setContactFirstName(?string $contactFirstName): object
     {
         $this->contactFirstName = $contactFirstName;
 
@@ -129,7 +129,7 @@ class Address
         return $this->emailAddress;
     }
 
-    public function setEmailAddress(?string $emailAddress): self
+    public function setEmailAddress(?string $emailAddress): object
     {
         $this->emailAddress = $emailAddress;
 
@@ -141,7 +141,7 @@ class Address
         return $this->phoneNumber;
     }
 
-    public function setPhoneNumber(?string $phoneNumber): self
+    public function setPhoneNumber(?string $phoneNumber): object
     {
         $this->phoneNumber = $phoneNumber;
 
