@@ -1,9 +1,9 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Scraper\ScraperTnt\Tests\Adapter;
 
 use PHPUnit\Framework\TestCase;
-use Scraper\Scraper\Annotation\Scraper;
+use Scraper\Scraper\Attribute\Scraper;
 use Scraper\Scraper\Request\ScraperRequest;
 use Scraper\ScraperTnt\Api\TntExpeditionCreationApi;
 use Scraper\ScraperTnt\Entity\Expedition;
@@ -37,13 +37,13 @@ class TntExpeditionCreationApiTest extends TestCase
 
         $this->assertInstanceOf(Expedition::class, $expedition);
 
-        $this->assertCount(1, $expedition->getParcelResponses());
+        $this->assertCount(1, $expedition->parcelResponses);
 
-        $parcelResponse = $expedition->getParcelResponses()->first();
+        $parcelResponse = $expedition->parcelResponses[0];
 
         $this->assertInstanceOf(ParcelResponse::class, $parcelResponse);
 
-        $this->assertEquals('7412345000000007', $parcelResponse->getParcelNumber());
+        $this->assertEquals('7412345000000007', $parcelResponse->parcelNumber);
     }
 
     public function testWithWrongResponseHttpCode(): void

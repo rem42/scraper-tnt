@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Scraper\ScraperTnt\Exception;
 
@@ -12,7 +12,7 @@ class TntResponseException extends TntException
     {
         $this->fault = $fault;
 
-        $faultStringArray = explode("\n", $fault->getFaultstring());
+        $faultStringArray = explode("\n", $fault->faultstring);
 
         $faultStringArray = array_filter($faultStringArray);
 

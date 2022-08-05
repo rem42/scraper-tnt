@@ -1,44 +1,24 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Scraper\ScraperTnt\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
-
 class Expedition
 {
-    private string $PDFLabels;
+    public string $PDFLabels;
 
-    /** @var Collection<int, ParcelResponse> */
-    private Collection $parcelResponses;
+    /** @var array<int, ParcelResponse> */
+    public array $parcelResponses = [];
 
-    public function getPDFLabels(): string
+    public function addParcelResponse(ParcelResponse $parcelResponse): self
     {
-        return $this->PDFLabels;
+        $this->parcelResponses[] = $parcelResponse;
+
+        return $this;
     }
 
     public function setPDFLabels(string $PDFLabels): self
     {
         $this->PDFLabels = $PDFLabels;
-
         return $this;
-    }
-
-    /**
-     * @param array<ParcelResponse> $parcelResponses
-     */
-    public function setParcelResponses(array $parcelResponses): self
-    {
-        $this->parcelResponses = new ArrayCollection($parcelResponses);
-
-        return $this;
-    }
-
-    /**
-     * @return Collection<int, ParcelResponse>
-     */
-    public function getParcelResponses(): Collection
-    {
-        return $this->parcelResponses;
     }
 }

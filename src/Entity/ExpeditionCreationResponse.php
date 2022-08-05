@@ -1,20 +1,14 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Scraper\ScraperTnt\Entity;
 
 class ExpeditionCreationResponse
 {
-    private Expedition $expedition;
-
-    public function getExpedition(): Expedition
-    {
-        return $this->expedition;
-    }
+    public Expedition $expedition;
 
     public function setExpedition(Expedition $expedition): self
     {
         $this->expedition = $expedition;
-
         return $this;
     }
 }
