@@ -1,11 +1,10 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Scraper\ScraperTnt\Factory;
 
 use Doctrine\Common\Annotations\AnnotationReader;
 use Symfony\Component\PropertyAccess\PropertyAccess;
 use Symfony\Component\PropertyInfo\Extractor\ReflectionExtractor;
-use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Encoder\XmlEncoder;
 use Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactory;
 use Symfony\Component\Serializer\Mapping\Loader\AnnotationLoader;
@@ -26,7 +25,7 @@ class SerializerFactory
 
         $metadataAwareNameConverter = new MetadataAwareNameConverter($classMetadataFactory);
 
-        $encoders    = ['json' => new JsonEncoder(), 'xml' => new XmlEncoder()];
+        $encoders = ['xml' => new XmlEncoder()];
         $normalizers = [
             new DateTimeNormalizer([
                 DateTimeNormalizer::FORMAT_KEY => 'Y-m-d',
