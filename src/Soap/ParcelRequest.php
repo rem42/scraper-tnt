@@ -4,12 +4,12 @@ namespace Scraper\ScraperTnt\Soap;
 
 class ParcelRequest
 {
-    public ?int $sequenceNumber       = null;
+    public ?int $sequenceNumber = null;
     public ?string $customerReference = null;
-    public ?float $weight             = null;
-    public ?int $insuranceAmount      = null;
+    public ?float $weight = null;
+    public ?int $insuranceAmount = null;
     public ?string $priorityGuarantee = null;
-    public ?string $comment           = null;
+    public ?string $comment = null;
 
     public function setSequenceNumber(?int $sequenceNumber): self
     {

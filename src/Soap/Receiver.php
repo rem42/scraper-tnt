@@ -4,11 +4,11 @@ namespace Scraper\ScraperTnt\Soap;
 
 class Receiver extends Address
 {
-    public ?string $instructions   = null;
-    public ?string $accessCode     = null;
-    public ?string $faxNumber      = null;
-    public ?string $floorNumber    = null;
-    public ?string $buldingId      = null;
+    public ?string $instructions = null;
+    public ?string $accessCode = null;
+    public ?string $faxNumber = null;
+    public ?string $floorNumber = null;
+    public ?string $buldingId = null;
     public ?bool $sendNotification = null;
 
     public function setInstructions(?string $instructions): self

@@ -4,17 +4,17 @@ namespace Scraper\ScraperTnt\Soap;
 
 class Address
 {
-    public ?string $type             = null;
-    public ?string $typeId           = null;
-    public ?string $name             = null;
-    public ?string $address1         = null;
-    public ?string $address2         = null;
-    public ?string $zipCode          = null;
-    public ?string $city             = null;
-    public ?string $contactLastName  = null;
+    public ?string $type = null;
+    public ?string $typeId = null;
+    public ?string $name = null;
+    public ?string $address1 = null;
+    public ?string $address2 = null;
+    public ?string $zipCode = null;
+    public ?string $city = null;
+    public ?string $contactLastName = null;
     public ?string $contactFirstName = null;
-    public ?string $emailAddress     = null;
-    public ?string $phoneNumber      = null;
+    public ?string $emailAddress = null;
+    public ?string $phoneNumber = null;
 
     public function setType(?string $type): self
     {

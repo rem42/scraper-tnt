@@ -5,12 +5,12 @@ namespace Scraper\ScraperTnt\Soap;
 class PaybackInfo
 {
     public ?bool $useSenderAddress = null;
-    public ?int $paybackAmount     = null;
-    public ?string $name           = null;
-    public ?string $address1       = null;
-    public ?string $address2       = null;
-    public ?string $zipCode        = null;
-    public ?string $city           = null;
+    public ?int $paybackAmount = null;
+    public ?string $name = null;
+    public ?string $address1 = null;
+    public ?string $address2 = null;
+    public ?string $zipCode = null;
+    public ?string $city = null;
 
     public function setUseSenderAddress(?bool $useSenderAddress): self
     {

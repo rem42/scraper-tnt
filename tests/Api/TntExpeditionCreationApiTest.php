@@ -19,7 +19,7 @@ class TntExpeditionCreationApiTest extends TestCase
     public function testGetParcelResponse(): void
     {
         $scraperRequest = $this->createMock(ScraperRequest::class);
-        $scraper        = new Scraper();
+        $scraper = new Scraper();
 
         $responseInterface = $this->createMock(ResponseInterface::class);
         $responseInterface
@@ -49,7 +49,7 @@ class TntExpeditionCreationApiTest extends TestCase
     public function testWithWrongResponseHttpCode(): void
     {
         $scraperRequest = $this->createMock(ScraperRequest::class);
-        $scraper        = new Scraper();
+        $scraper = new Scraper();
 
         $responseInterface = $this->createMock(ResponseInterface::class);
         $responseInterface

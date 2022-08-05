@@ -25,7 +25,7 @@ class SerializerFactory
 
         $metadataAwareNameConverter = new MetadataAwareNameConverter($classMetadataFactory);
 
-        $encoders    = ['xml' => new XmlEncoder()];
+        $encoders = ['xml' => new XmlEncoder()];
         $normalizers = [
             new DateTimeNormalizer([
                 DateTimeNormalizer::FORMAT_KEY => 'Y-m-d',

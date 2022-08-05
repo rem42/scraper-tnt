@@ -10,18 +10,18 @@ class Parameters
     public Sender $sender;
     public Receiver $receiver;
     public ?string $serviceCode = null;
-    public ?int $quantity       = null;
+    public ?int $quantity = null;
     public ParcelsRequest $parcelsRequest;
-    public ?string $saturdayDelivery  = null;
-    public ?string $paybackInfo       = null;
-    public ?string $labelFormat       = null;
+    public ?string $saturdayDelivery = null;
+    public ?string $paybackInfo = null;
+    public ?string $labelFormat = null;
     public ?string $hazardousMaterial = null;
 
     public function __construct()
     {
-        $this->shippingDate   = new \DateTime();
-        $this->sender         = new Sender();
-        $this->receiver       = new Receiver();
+        $this->shippingDate = new \DateTime();
+        $this->sender = new Sender();
+        $this->receiver = new Receiver();
         $this->parcelsRequest = new ParcelsRequest();
     }
 

@@ -4,10 +4,10 @@ namespace Scraper\ScraperTnt\Entity;
 
 class ParcelResponse
 {
-    public ?string $parcelNumber   = null;
+    public ?string $parcelNumber = null;
     public ?string $sequenceNumber = null;
-    public ?string $stickerNumber  = null;
-    public ?string $trackingURL    = null;
+    public ?string $stickerNumber = null;
+    public ?string $trackingURL = null;
 
     public function setParcelNumber(?string $parcelNumber): self
     {
