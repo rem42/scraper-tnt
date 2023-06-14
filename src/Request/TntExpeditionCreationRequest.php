@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Scraper\ScraperTnt\Request;
 
@@ -17,8 +17,8 @@ class TntExpeditionCreationRequest extends TntRequest implements RequestBody, Re
 
     public function __construct(string $username, string $password)
     {
-        $this->username   = $username;
-        $this->password   = $password;
+        $this->username = $username;
+        $this->password = $password;
         $this->parameters = new Parameters();
     }
 
@@ -80,8 +80,8 @@ class TntExpeditionCreationRequest extends TntRequest implements RequestBody, Re
 </SOAP-ENV:Body>',
             $serializer->serialize($this->parameters, 'xml', [
                 XmlEncoder::ROOT_NODE_NAME => 'parameters',
-                XmlEncoder::FORMAT_OUTPUT  => true,
-                XmlEncoder::AS_COLLECTION  => true,
+                XmlEncoder::FORMAT_OUTPUT => true,
+                XmlEncoder::AS_COLLECTION => true,
             ])
         ));
     }
