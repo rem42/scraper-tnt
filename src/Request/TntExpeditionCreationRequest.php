@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Scraper\ScraperTnt\Request;
 
@@ -71,6 +73,7 @@ class TntExpeditionCreationRequest extends TntRequest implements RequestBody, Re
     private function getEnvelopeBody(): string
     {
         $serializer = SerializerFactory::create();
+
         return str_replace('<?xml version="1.0"?>', '', sprintf(
             '
 <SOAP-ENV:Body>

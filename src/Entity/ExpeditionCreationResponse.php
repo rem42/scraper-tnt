@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Scraper\ScraperTnt\Entity;
 
@@ -9,6 +11,7 @@ class ExpeditionCreationResponse
     public function setExpedition(Expedition $expedition): self
     {
         $this->expedition = $expedition;
+
         return $this;
     }
 }

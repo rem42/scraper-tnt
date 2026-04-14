@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Scraper\ScraperTnt\Entity;
 
@@ -19,6 +21,7 @@ class Expedition
     public function setPDFLabels(string $PDFLabels): self
     {
         $this->PDFLabels = $PDFLabels;
+
         return $this;
     }
 }
