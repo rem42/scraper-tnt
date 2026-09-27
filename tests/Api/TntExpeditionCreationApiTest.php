@@ -5,7 +5,9 @@ declare(strict_types=1);
 namespace Scraper\ScraperTnt\Tests\Adapter;
 
 use PHPUnit\Framework\TestCase;
-use Scraper\Scraper\Attribute\Scraper;
+use Scraper\Scraper\Attribute\Method;
+use Scraper\Scraper\Attribute\Scheme;
+use Scraper\Scraper\Dto\ScraperConfig;
 use Scraper\Scraper\Request\ScraperRequest;
 use Scraper\ScraperTnt\Api\TntExpeditionCreationApi;
 use Scraper\ScraperTnt\Entity\Expedition;
@@ -21,7 +23,7 @@ class TntExpeditionCreationApiTest extends TestCase
     public function testGetParcelResponse(): void
     {
         $scraperRequest = $this->createMock(ScraperRequest::class);
-        $scraper = new Scraper();
+        $scraper = new ScraperConfig(Method::POST, Scheme::HTTP, 'www.tnt.fr', '/service/');
 
         $responseInterface = $this->createMock(ResponseInterface::class);
         $responseInterface
@@ -53,7 +55,7 @@ class TntExpeditionCreationApiTest extends TestCase
     public function testWithWrongResponseHttpCode(): void
     {
         $scraperRequest = $this->createMock(ScraperRequest::class);
-        $scraper = new Scraper();
+        $scraper = new ScraperConfig(Method::POST, Scheme::HTTP, 'www.tnt.fr', '/service/');
 
         $responseInterface = $this->createMock(ResponseInterface::class);
         $responseInterface
